@@ -1,0 +1,111 @@
+/* Basisstile */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f9f9f9;
+	width: 100%;
+}
+
+header {
+	/* background-image: url(../img/gold-einstein-physics-equation-oallhjy9ax2rrxix.jpg);
+    background-size: 100% 50%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; */
+	background-color: rgb(84, 57, 45);
+	color: #fff;
+	height: 570px;
+	text-align: center;
+
+}
+
+h1 {
+	margin: 0;
+	text-align: center;
+	position: relative;
+	top: 100px;
+	right: 100px;
+	font-family: "Oswald", Helvetica, sans-serif;
+	font-size: 80px;
+	transform: skewY(-10deg);
+	letter-spacing: 4px;
+	word-spacing: -8px;
+	color: rgb(118, 122, 132);
+	text-shadow: -1px -1px 0 rgb(33, 34, 36), -2px -2px 0 rgb(33, 34, 36), -3px -3px 0 rgb(33, 34, 36), -4px -4px 0 rgb(33, 34, 36), -5px -5px 0 rgb(33, 34, 36), -6px -6px 0 rgb(33, 34, 36), -7px -7px 0 rgb(33, 34, 36), -8px -8px 0 rgb(33, 34, 36), -30px 20px 40px dimgrey;
+}
+
+.topic {
+	display: inline-block;
+}
+
+
+
+
+p {
+	font-size: 1.2em;
+
+}
+
+#topics {
+	text-align: center;
+}
+
+
+
+.topic h3 {
+	color: #004080;
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+.topic ul {
+	list-style-type: none;
+	padding: 0;
+	text-align: left;
+}
+
+
+.color-change {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.link {
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	z-index: 1;
+	transition: color 0.4s ease;
+}
+
+.color-change::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, rgb(177,200,195), rgb(61,119,107) );
+	transition: left 0.4s ease;
+	z-index: 0;
+}
+
+.color-change:hover::before {
+	left: 0;
+}
+
+
+footer {
+	background-color: #004080;
+	color: #fff;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+}
