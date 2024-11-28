@@ -7,50 +7,76 @@
     <title>PhysikLernApp</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/istockphoto-1132090957-612x612.jpg" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <header>
-        <h1>Willkommen zur Physik Lernplattform</h1>
-        <p>Hier findest du alle wichtigen Themen und Übungen zur Physik.</p>
+    <header class="header">
+        <div class="container">
+          <h1 class="logo">PhysikLernPlattform</h1>
+          <nav class="nav">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li class="li4"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+          </button>
+        </div>
     </header>
 
     <main>
-        <section id="topics">
-            <h2>Themenübersicht</h2>
+        <section id="home" class="hero">
+          <h2>Wilkommen zu der PhysikLernPlattform</h2>
+          <p>Hier wird Physik für dich einfach und klar sein.</p>
+        </section>
 
-            <!-- Beispielstruktur für Themen und Unterthemen -->
-            <div class="topic">
-                <h3>Druck und Auftrieb</h3>
-                <ul>
-                    <li><div class="color-change"><a class="link" href="fluessigkeiten-gase.html">Eigenschaften des Drucks in Flüssigkeiten und Gasen</a></div></li>
-                    <li><div class="color-change"><a class="link" href="schweredruck.html">Schweredruck und Berechnung</a></div></li>
-                    <li><div class="color-change"><a class="link" href="u-rohr-manometer.html">U-Rohr-Manometer und Luftdruck</a></div></li>
-                    <li><div class="color-change"><a class="link" href="auftrieb.html">Der Auftrieb und seine Berechnung</a></div></li>
-                    <li><div class="color-change"><a class="link" href="druck.html">Druck als physikalische Größe</a></div></li>
-                </ul>
-            </div>
-
-            <div class="topic2">
-                <h3>Stromkreise und Elektromagnetismus</h3>
-                <ul>
-                    <li><a href="stromkreis.html">Einfacher Stromkreis</a></li>
-                    <li><a href="widerstand.html">Elektrischer Widerstand und Widerstand eines Drahtes</a></li>
-                    <li><a href="reihen-parallelschaltung.html">Reihen- und Parallelschaltung</a></li>
-                    <li><a href="elektrische-leistung.html">Elektrische Leistung und Energie</a></li>
-                    <li><a href="magnetismus.html">Grundlagen des Magnetismus</a></li>
-                    <li><a href="elektromagnetismus.html">Einführung in den Elektromagnetismus</a></li>
-                </ul>
-            </div>
-
-            <!-- Weitere Themen können hier hinzugefügt werden -->
+        <!-- Topics Section -->
+        <section class="hero">
+          <h2>8.Klasse</h2>
+            <div class="topic-container">
+                <div class="topic" onclick="toggleSubtopics('muk-subtopics')">Mechanik und Kräfte</div>
+                <div id="muk-subtopics" class="subtopics">
+                  <p>Механіка</p>
+                  <p>Електрика</p>
+                  <p>Оптика</p>
+                </div>
+              </div>
+              <div class="topic-container">
+                <div class="topic" onclick="toggleSubtopics('eue-subtopics')">Energie und Energieerhaltung</div>
+                <div id="eue-subtopics" class="subtopics">
+                  <p>Алгебра</p>
+                  <p>Геометрія</p>
+                  <p>Тригонометрія</p>
+                </div>
+              </div>
+              <div class="topic-container">
+                <div class="topic" onclick="toggleSubtopics('eum-subtopics')">Elektrizität und Magnetismus</div>
+                <div id="eum-subtopics" class="subtopics">
+                  <p>Алгебра</p>
+                  <p>Геометрія</p>
+                  <p>Тригонометрія</p>
+                </div>
+              </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Physik Lernplattform für die 8. Klasse</p>
+    <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <p>&copy; 2024 MyCoolWebsite. All rights reserved.</p>
+            <ul class="socials">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
     </footer>
-
+    <script src="js/script.js"></script>
 </body>
-
 </html>

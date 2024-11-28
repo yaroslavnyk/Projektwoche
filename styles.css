@@ -1,0 +1,267 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: linear-gradient(180deg, #191A1F, #EBEBDE) #f4f4f4;
+  }
+  
+  /* Header Styles */
+  .header {
+    background: linear-gradient(90deg, #444648, #8F8A85);
+    color: #EBEBDE;
+    padding: 15px 0;
+    font-style: italic;
+    font-weight: bold;
+    position: static;
+  }
+  
+  main{
+  background-image: url(../img/pexels-kaboompics-5775.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+
+  h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .topic-container {
+    width: 80%;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  .topic {
+    cursor: pointer;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: #8F8A85;
+    transition: background 0.3s;
+  }
+
+  .topic:hover {
+    background: #2F3034;
+  }
+
+  .subtopics {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    transition: max-height 0.5s ease-out;
+  }
+  
+
+  .subtopics p {
+    margin: 0;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .subtopics p:last-child {
+    border-bottom: none;
+  }
+
+  .subtopics p:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  .nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav li {
+    margin: 0 10px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #EBEBDE;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #A7A59C;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    color: #555;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background: linear-gradient(90deg, #444648, #8F8A85);
+    color: #EBEBDE;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-content p {
+    margin: 0;
+  }
+  
+  .socials {
+    list-style: none;
+    display: flex;
+  }
+  
+  .socials li {
+    margin: 0 10px;
+  }
+  
+  .socials a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .socials a:hover {
+    color: #ff7eb3;
+  }
+  
+  /* Responsive Menu */
+  .nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    width: 30px;
+    height: 3px;
+    background: white;
+    position: relative;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s;
+  }
+  
+  .hamburger::before {
+    transform: translateY(-8px);
+  }
+  
+  .hamburger::after {
+    transform: translateY(8px);
+  }
+  
+  @media (max-width: 768px) {
+    .nav ul {
+      display: none;
+      flex-direction: column;
+      background: #333;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+    }
+  
+    .nav ul.show {
+      display: flex;
+      border-radius: 10px;
+      border: solid 1px white;
+    }
+  
+    .nav li {
+      margin: 10px;
+      text-align: center;
+      border-bottom: solid 1px white;
+      margin-bottom: 5px;
+
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+  }
+ 
+  @media (max-width: 450px) {
+     main{
+      background-image: url(../img/pexels-cottonbro-5185093.jpg);
+      background-repeat: no-repeat;
+      
+     }
+     #home{
+      display: none;
+     }
+  }
+
+/* Webkit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of vertical scrollbar */
+  height: 12px; /* Height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4; /* Light background for the track */
+  border-radius: 10px; /* Smooth corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #191A1F, #EBEBDE); /* Gradient color for the thumb */
+  border-radius: 10px; /* Rounded corners */
+  border: 3px solid #f4f4f4; /* Add some space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #191A1F, #EBEBDE); /* Slightly darker gradient on hover */
+}
+
+/* Optional: Add a shadow effect */
+::-webkit-scrollbar-thumb {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
